@@ -35,17 +35,17 @@ RUN mkdir -p /workspace/ComfyUI/models/checkpoints && \
   mkdir -p /workspace/ComfyUI/custom_nodes
 
 # Copy ROCm-tested requirements files
-COPY docker/requirements_rocm.txt /workspace/
+COPY requirements_rocm.txt /workspace/
 
 # Install Python dependencies using ROCm-compatible requirements
 # These files have been tested on real AMD hardware and filter out packages that break ROCm
 RUN pip install --no-cache-dir -r /workspace/requirements_rocm.txt
 
 # Copy startup script, models config, and sample workflow
-COPY docker/startup.sh /workspace/startup.sh
-COPY docker/download_models.py /workspace/download_models.py
-COPY docker/models.yaml /workspace/models.yaml
-COPY docker/sample_workflow.json /workspace/ComfyUI/
+COPY startup.sh /workspace/startup.sh
+COPY download_models.py /workspace/download_models.py
+COPY models.yaml /workspace/models.yaml
+COPY sample_workflow.json /workspace/ComfyUI/
 
 # Make startup script executable
 RUN chmod +x /workspace/startup.sh
