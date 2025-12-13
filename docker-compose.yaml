@@ -21,17 +21,17 @@ services:
     # Volume mapping to preserve models and data
     volumes:
       # Model storage (checkpoints, VAE, LoRA, etc.)
-      - comfyui/models:/workspace/ComfyUI/models
+      - comfyui:/workspace/ComfyUI/models
       # Generated images and outputs
-      - comfyui/output:/workspace/ComfyUI/output
+      - comfyui:/workspace/ComfyUI/output
       # Input images for processing
-      - comfyui/input:/workspace/ComfyUI/input
+      - comfyui:/workspace/ComfyUI/input
       # Custom nodes and extensions
-      - comfyui/custom_nodes:/workspace/ComfyUI/custom_nodes
+      - comfyui:/workspace/ComfyUI/custom_nodes
       # ComfyUI user settings and workflows
-      - comfyui/user:/workspace/ComfyUI/user
+      - comfyui:/workspace/ComfyUI/user
       # Temporary files (optional)
-      - comfyui/temp:/workspace/ComfyUI/temp
+      - comfyui:/workspace/ComfyUI/temp
 
     # Environment variables
     environment:
