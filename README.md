@@ -2,7 +2,7 @@
 
 🔥 **ComfyUI with AMD ROCm support** - Run ComfyUI on AMD GPUs with optimized ROCm-compatible dependencies.
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/corundex/comfyui-rocm)](https://hub.docker.com/r/corundex/comfyui-rocm) [![ROCm](https://img.shields.io/badge/ROCm-6.4+-green)](https://rocm.docs.amd.com/) [![AMD GPU](https://img.shields.io/badge/AMD-RX%206000%2B-red)](https://www.amd.com/en/products/graphics/desktops/radeon.html)
+[![ROCm](https://img.shields.io/badge/ROCm-6.4+-green)](https://rocm.docs.amd.com/) [![AMD GPU](https://img.shields.io/badge/AMD-RX%206000%2B-red)](https://www.amd.com/en/products/graphics/desktops/radeon.html)
 
 ![ComfyUI Interface](Screenshot.png)
 *ComfyUI running on AMD ROCm with sample workflow and generated landscape image*
@@ -120,7 +120,7 @@ docker run -d --device=/dev/kfd --device=/dev/dri --group-add=video \
 ```yaml
 services:
   comfyui-rocm:
-    image: corundex/comfyui-rocm:latest
+    image: ghcr.io/azkali/comfyui-rocm:7.1
     container_name: comfyui-rocm
     devices:
       - /dev/kfd:/dev/kfd
@@ -192,4 +192,4 @@ This project is licensed under GPL-3.0. See the [LICENSE](LICENSE) file for deta
 
 ---
 
-🔗 **Links:** [Docker Hub](https://hub.docker.com/r/corundex/comfyui-rocm) | [GitHub](https://github.com/corundex/comfyui-rocm) | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+🔗 **Links:** [GitHub](https://github.com/Azkali/comfyui-rocm) | [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
