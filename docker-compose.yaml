@@ -1,6 +1,6 @@
 services:
   comfyui-rocm:
-    image: corundex/comfyui-rocm:latest # For custom tags, use rocm7.1.1_ubuntu24.04_py3.12_pytorch_2.9.1
+    image: ghcr.io/azkali/comfyui-rocm:7.1 # For custom tags, use rocm7.1.1_ubuntu24.04_py3.12_pytorch_2.9.1
     pull_policy: always
     container_name: comfyui-rocm
     hostname: comfyui-rocm
